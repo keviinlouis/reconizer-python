@@ -51,12 +51,7 @@ class Interface():
         
         previsao = self.rede.predict(imagem_teste)
         
-        if previsao > 0.5:
-            print('floresta')
-            Label(self.root, text='floresta').grid(row=1, column=0)
-        elif previsao < 0.5:
-            print('deserto')
-            Label(self.root, text='deserto').grid(row=1, column=0)
+        Label(self.root, text=previsao).grid(row=1, column=0)
  
     
     def __init__(self):
